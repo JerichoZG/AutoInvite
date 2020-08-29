@@ -3,6 +3,7 @@ local GuildInviteKey = {"g++", "ginv", "加公會", "加公会",}
 
 local strlower = string.lower
 local C_BattleNet_GetAccountInfoByID = C_BattleNet.GetAccountInfoByID
+local InviteToGroup = C_PartyInfo.InviteUnit
 
 -- [[ 按alt組隊邀請，ctrl公會邀請 ]] --
 
@@ -50,7 +51,7 @@ hooksecurefunc("ChatFrame_OnHyperlinkShow", function(frame, link, _, button)
 	-- 別打開輸入框
 	if hide then ChatEdit_ClearChat(ChatFrame1.editBox) end
 end)
-	
+
 StaticPopupDialogs["IOWguildinvPopup"] = {
 	--text = "Do you want to invite %s to your guild?",
 	text = format(ERR_GUILD_INVITE_S, "%s"),
@@ -68,7 +69,7 @@ StaticPopupDialogs["IOWguildinvPopup"] = {
 	hideOnEscape = true,
 	preferredIndex = 3, 
 }
-	
+
 -- [[ 密語關鍵字邀請 ]] --
 
 local WhisperInvite = CreateFrame("Frame", UIParent)

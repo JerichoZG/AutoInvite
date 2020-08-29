@@ -4,6 +4,6 @@
 ## Notes-zhTW: 對名字按ALT邀請組隊，按CTRL邀請公會，被密語+++自動邀請組隊，g++彈出公會請求。
 ## Notes-zhCN: 对名字按ALT邀请组队，按CTRL邀请公会，被密语+++自动邀请组队，g++弹出公会请求。
 ## Author: EK
-## Version: R1
+## Version: R1.1
 
 AutoInvite.lua
