@@ -1,5 +1,5 @@
-local InviteKey = {"111", "+++", "inv",}
-local GuildInviteKey = {"g++", "ginv", "加公會", "加公会",}
+local InviteKey = {"111", "222",}
+local GuildInviteKey = {"333", "444",}
 
 local strlower = string.lower
 local C_BattleNet_GetAccountInfoByID = C_BattleNet.GetAccountInfoByID
