@@ -3,7 +3,7 @@ local GuildInviteKey = {"333", "444",}
 
 local strlower = string.lower
 local C_BattleNet_GetAccountInfoByID = C_BattleNet.GetAccountInfoByID
-local C_PartyInfo.InviteUnit = C_PartyInfo.InviteUnit
+local InviteToGroup = C_PartyInfo.InviteUnit
 
 -- [[ 按alt組隊邀請，ctrl公會邀請 ]] --
 
@@ -15,7 +15,7 @@ hooksecurefunc("ChatFrame_OnHyperlinkShow", function(frame, link, _, button)
 		if type == "player" then
 			local unit = value:match("([^:]+)")
 			if IsAltKeyDown() then
-				C_PartyInfo.InviteUnit(unit)
+				InviteToGroup(unit)
 				hide = true
 			elseif IsControlKeyDown() then
 				GuildInvite(unit)
@@ -93,7 +93,7 @@ local WhisperInvite = CreateFrame("Frame", UIParent)
 						end
 					end
 				else
-					C_PartyInfo.InviteUnit(name)
+					InviteToGroup(name)
 				end
 			end
 		end
